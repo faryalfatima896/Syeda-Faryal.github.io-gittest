@@ -1,12 +1,10 @@
-title: "MY CE journey"
-author: "Faryal Fatima"
-description: "My blog"
+title: "Syeda Faryal's Blog"
+description: "Personal website and blog"
+baseurl: "/Syeda-Faryal.github.io-gittest"
+url: "https://faryalfatima896.github.io"
 permalink: /:title/
-lang: "en"
-excerpt_separator: "\n\n\n"
-date_format: "%B %d, %Y"
+markdown: kramdown
 
-# Layout
 
 show_excerpts: true             # show article excerpts instead of archive list on the home page
 show_frame: true                # display a grey frame on large screens
