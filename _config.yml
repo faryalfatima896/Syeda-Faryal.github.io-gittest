@@ -5,27 +5,7 @@ baseurl: "/Syeda-Faryal.github.io-gittest"
 permalink: /:title/
 markdown: kramdown
 
-show_excerpts: true             # show article excerpts instead of archive list on the home page
-show_frame: true                # display a grey frame on large screens
-show_sidebar: false             # show a sidebar instead of the usual header
-show_minimal: false             # remove all clutter
-
-#show_frame: "/assets/images/background.svg"
-
-# Menu                          # for available icons see https://fontawesome.com/v5/icons/
-
-navigation:                     # accepts {file, title, url, icon, sidebaricon}
-  - {file: "archive.html", sidebaricon: home}
-  - {file: "README.md", sidebaricon: address-card}
-
-external:                       # accepts {file, title, url, icon, sidebaricon}
-  - {title: Mail, icon: envelope, url: "faryalfatima896@gmail.com"}
-  - {title: Github, icon: github, url: "https://github.com/Syeda-faryal.github.io""}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
-
-comments:
-#  disqus_shortname: ""         # see https://disqus.com
-#  isso_domain: ""              # see https://isso-comments.de
-
-plugins:
- - jekyll-feed
+show_excerpts: true
+show_frame: true
+show_sidebar: false
+show_minimal: false
