@@ -4,7 +4,10 @@
 {% include head.html %}
 
 <style>
-  /* Particles Background */
+  /* ===== GOOGLE FONT IMPORT ===== */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+  /* ===== PARTICLES BACKGROUND ===== */
   #particles-js {
     position: fixed;
     width: 100%;
@@ -16,70 +19,69 @@
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
   }
 
+  /* ===== BODY ===== */
   body {
     position: relative;
     z-index: 1;
+    font-family: 'Poppins', sans-serif !important;
+    color: #FF69B4 !important;
   }
-  /* Google Font Import - Modern & Clean */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Apply Font & Golden Color to Everything */
-body {
-  font-family: 'Poppins', sans-serif !important;
-  color: #FFD700 !important;
-}
+  /* ===== HEADINGS ===== */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif !important;
+    color: #FF1493 !important;
+    font-weight: 700 !important;
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif !important;
-  color: #FFC300 !important;
-  font-weight: 700 !important;
-}
+  /* ===== PARAGRAPHS & TEXT ===== */
+  p, li, span, div {
+    font-family: 'Poppins', sans-serif !important;
+    color: #FF69B4 !important;
+  }
 
-p, li, span, div {
-  font-family: 'Poppins', sans-serif !important;
-  color: #FFD700 !important;
-}
+  /* ===== HOVER ANIMATIONS ON LINKS ===== */
+  a {
+    position: relative;
+    color: #FF69B4 !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+  }
 
-a {
-  color: #FFD700 !important;
-  text-decoration: none !important;
-}
+  a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #FF69B4;
+    transition: width 0.3s ease;
+    box-shadow: 0 0 8px #FF1493;
+  }
 
-a:hover {
-  color: #ffffff !important;
-  text-shadow: 0 0 8px #FFD700 !important;
-}
-  /* Hover Animation on Links */
-a {
-  position: relative;
-  color: #FFD700 !important;
-  text-decoration: none !important;
-  transition: color 0.3s ease !important;
-}
+  a:hover::after {
+    width: 100%;
+  }
 
-/* Underline slide-in effect */
-a::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: #FFD700;
-  transition: width 0.3s ease;
-  box-shadow: 0 0 8px #FFD700;
-}
+  a:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px #FF69B4, 0 0 20px #FF1493 !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+  }
 
-a:hover::after {
-  width: 100%;
-}
+  /* ===== SCROLL FADE-IN ANIMATION ===== */
+  .fade-in-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
 
-a:hover {
-  color: #ffffff !important;
-  text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700 !important;
-  letter-spacing: 1px !important;
-  transition: all 0.3s ease !important;
-}
+  .fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 </style>
 
 <body>
@@ -89,7 +91,9 @@ a:hover {
 
   <header class="hover smooth">
     {% unless site.show_minimal and site.navigation and site.external %}
-      <h1 {% if site.navigation and site.external %}class="full"{% endif %}><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
+      <h1 {% if site.navigation and site.external %}class="full"{% endif %}>
+        <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      </h1>
     {% endunless %}
     {% include menu.html %}
   </header>
@@ -108,14 +112,14 @@ a:hover {
     particlesJS("particles-js", {
       particles: {
         number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: "#ffffff" },
+        color: { value: "#FF69B4" },
         shape: { type: "circle" },
         opacity: { value: 0.5, random: true },
         size: { value: 3, random: true },
         line_linked: {
           enable: true,
           distance: 150,
-          color: "#ffffff",
+          color: "#FF69B4",
           opacity: 0.4,
           width: 1
         },
@@ -140,6 +144,29 @@ a:hover {
         }
       },
       retina_detect: true
+    });
+  </script>
+
+  <!-- Scroll Fade-In Animation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const targets = document.querySelectorAll('h1, h2, h3, p, a, li, div, span, footer');
+      targets.forEach((el, i) => {
+        el.classList.add('fade-in-element');
+        el.style.transitionDelay = (i * 0.05) + 's';
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in-element').forEach(el => {
+        observer.observe(el);
+      });
     });
   </script>
 
