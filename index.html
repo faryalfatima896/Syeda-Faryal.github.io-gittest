@@ -3,15 +3,14 @@ layout: default
 title: "Home"
 ---
 
-{% if site.show_excerpts %}
-  {% for post in site.posts %}
-    <article>
-      {% include meta.html post=post %}
-      {{ post.excerpt }}
-      <footer class="button"><a href="{{ post.url | relative_url }}">read more</a></footer>
-    </article>
-  {% endfor %}
-{% else %}
-  {% capture source %}{% include_relative archive.html title="Posts" %}{% endcapture %}
-  {{ source | split: "---" | last }}
-{% endif %}
+<article>
+  <h1>Syeda Faryal Fatima</h1>
+  <p>Computer Engineering Student at UET Faisalabad</p>
+  <p>
+    Welcome to my personal blog! I am a CE student sharing my journey, 
+    experiences, and learnings. This blog is about my life at UET, 
+    coding adventures, and everything in between.
+  </p>
+  <p>📍 Faisalabad, Pakistan</p>
+  <p>📧 faryalfatima896@github.io</p>
+</article>
