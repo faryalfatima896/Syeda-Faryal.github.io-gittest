@@ -1,11 +1,9 @@
-title: "Syeda Faryal's Blog"
-description: "Personal website and blog"
-url: "https://faryalfatima896.github.io"
-baseurl: "/Syeda-Faryal.github.io-gittest"
-permalink: /:title/
-markdown: kramdown
-
-show_excerpts: true
-show_frame: true
-show_sidebar: false
-show_minimal: false
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Blog"
+    url: "/blog"
+  - title: "About"
+    url: "/about"
+  - title: "Contact"
+    url: "/contact"
