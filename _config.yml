@@ -1,9 +1,14 @@
-nav:
+title: "Syeda Faryal's Blog"
+description: "A CE student's journey at UET Faisalabad"
+baseurl: "/Syeda-Faryal.github.io-gittest"
+url: "https://faryalfatima896.github.io"
+
+menu:
   - title: "Home"
     url: "/"
   - title: "Blog"
-    url: "/blog"
+    url: "/blog/"
   - title: "About"
-    url: "/about"
+    url: "/about/"
   - title: "Contact"
-    url: "/contact"
+    url: "/contact/"
