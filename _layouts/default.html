@@ -49,6 +49,37 @@ a:hover {
   color: #ffffff !important;
   text-shadow: 0 0 8px #FFD700 !important;
 }
+  /* Hover Animation on Links */
+a {
+  position: relative;
+  color: #FFD700 !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+/* Underline slide-in effect */
+a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #FFD700;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px #FFD700;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700 !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s ease !important;
+}
 </style>
 
 <body>
