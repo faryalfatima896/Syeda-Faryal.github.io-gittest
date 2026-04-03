@@ -1,17 +1,15 @@
 title: "Syeda Faryal's Blog"
 description: "Personal website and blog"
-baseurl: "/Syeda-Faryal.github.io-gittest"
 url: "https://faryalfatima896.github.io"
+baseurl: "/Syeda-Faryal.github.io-gittest"
 permalink: /:title/
 markdown: kramdown
-
 
 show_excerpts: true             # show article excerpts instead of archive list on the home page
 show_frame: true                # display a grey frame on large screens
 show_sidebar: false             # show a sidebar instead of the usual header
 show_minimal: false             # remove all clutter
-url: "https://faryalfatima896.github.io"
-baseurl: "/Syeda-Faryal.github.io-gittest"
+
 #show_frame: "/assets/images/background.svg"
 
 # Menu                          # for available icons see https://fontawesome.com/v5/icons/
