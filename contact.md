@@ -1,15 +1,10 @@
-
 ---
 layout: page
 title: "Contact"
 permalink: /contact/
 ---
----
-layout: page
-title: "Contact"
----
 
-# Contact Me
+## Contact Me
 
 Feel free to reach out to me!
 
