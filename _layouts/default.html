@@ -10,15 +10,14 @@
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: #FAFAF8;
-  color: #2C2C2A;
+  background: #0f0f1a;
+  color: #F0EFF8;
   min-height: 100vh;
 }
 
-/* ===== NAVBAR ===== */
 .site-header {
-  background: #ffffff;
-  border-bottom: 1px solid #E8E6E0;
+  background: rgba(15,15,26,0.95);
+  border-bottom: 1px solid rgba(127,119,221,0.2);
   padding: 1.2rem 3rem;
   display: flex;
   justify-content: space-between;
@@ -26,13 +25,14 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(10px);
 }
 
 .site-title {
   font-family: 'Playfair Display', serif;
   font-size: 18px;
   font-weight: 600;
-  color: #2C2C2A;
+  color: #F0EFF8;
   text-decoration: none;
   letter-spacing: 0.3px;
 }
@@ -45,30 +45,28 @@ body {
 
 .site-nav a {
   font-size: 13.5px;
-  color: #888780;
+  color: #6b6a7a;
   text-decoration: none;
   letter-spacing: 0.4px;
   font-weight: 400;
   transition: color 0.2s;
 }
 
-.site-nav a:hover { color: #3C3489; }
+.site-nav a:hover { color: #AFA9EC; }
 
-/* ===== MAIN CONTENT ===== */
 .page-content {
   max-width: 960px;
   margin: 0 auto;
   padding: 3rem 2rem;
 }
 
-/* ===== FOOTER ===== */
 .site-footer {
-  background: #ffffff;
-  border-top: 1px solid #E8E6E0;
+  background: #12121f;
+  border-top: 1px solid rgba(127,119,221,0.15);
   padding: 1.4rem 3rem;
   text-align: center;
   font-size: 12.5px;
-  color: #B4B2A9;
+  color: #3C3A55;
   margin-top: 4rem;
 }
 </style>
