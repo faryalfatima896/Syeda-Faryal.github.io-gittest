@@ -10,14 +10,14 @@
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: #FAFAF8;
-  color: #2C2C2A;
+  background: #0f0f1a;
+  color: #F0EFF8;
   min-height: 100vh;
 }
 
 .site-header {
-  background: #ffffff;
-  border-bottom: 1px solid #E8E6E0;
+  background: rgba(15,15,26,0.95);
+  border-bottom: 1px solid rgba(127,119,221,0.2);
   padding: 1.2rem 3rem;
   display: flex;
   justify-content: space-between;
@@ -31,7 +31,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 18px;
   font-weight: 600;
-  color: #2C2C2A;
+  color: #F0EFF8;
   text-decoration: none;
   letter-spacing: 0.3px;
 }
@@ -44,14 +44,14 @@ body {
 
 .site-nav a {
   font-size: 13.5px;
-  color: #888780;
+  color: #6b6a7a;
   text-decoration: none;
   letter-spacing: 0.4px;
   font-weight: 400;
   transition: color 0.2s;
 }
 
-.site-nav a:hover { color: #3C3489; }
+.site-nav a:hover { color: #AFA9EC; }
 
 .page-content {
   max-width: 960px;
@@ -59,13 +59,89 @@ body {
   padding: 3rem 2rem;
 }
 
+/* ===== ABOUT & OTHER PAGES DARK STYLING ===== */
+h1, h2, h3 {
+  color: #F0EFF8;
+}
+
+h1 a, h2 a {
+  color: #AFA9EC !important;
+  text-decoration: none;
+}
+
+p, li {
+  color: #9998aa;
+}
+
+a {
+  color: #AFA9EC;
+}
+
+/* About page sections */
+.about-intro { color: #9998aa !important; }
+.about-intro span { color: #F0EFF8 !important; }
+
+.section-heading {
+  color: #F0EFF8 !important;
+  border-bottom: 1px solid rgba(127,119,221,0.2) !important;
+}
+
+.about-card {
+  background: #1a1a2e !important;
+  border: 1px solid rgba(127,119,221,0.2) !important;
+}
+
+.about-card-value { color: #E8E7F5 !important; }
+.about-card-desc { color: #6b6a7a !important; }
+
+.skill-pill {
+  background: rgba(127,119,221,0.15) !important;
+  color: #AFA9EC !important;
+}
+
+.project-card {
+  background: #1a1a2e !important;
+  border: 1px solid rgba(127,119,221,0.2) !important;
+  border-left: 3px solid #7F77DD !important;
+}
+
+.project-title { color: #E8E7F5 !important; }
+.project-desc { color: #9998aa !important; }
+
+.fun-facts li {
+  color: #9998aa !important;
+  border-bottom: 1px solid rgba(127,119,221,0.1) !important;
+}
+
+.introvert-box {
+  background: rgba(127,119,221,0.1) !important;
+  border-left: 3px solid #7F77DD !important;
+  color: #AFA9EC !important;
+}
+
+/* Contact page */
+.contact-intro { color: #9998aa !important; }
+
+.contact-card {
+  background: #1a1a2e !important;
+  border: 1px solid rgba(127,119,221,0.2) !important;
+  color: #E8E7F5 !important;
+}
+
+.contact-card:hover {
+  border-color: rgba(127,119,221,0.5) !important;
+}
+
+.contact-card-value { color: #E8E7F5 !important; }
+.contact-note { color: #3C3A55 !important; }
+
 .site-footer {
-  background: #ffffff;
-  border-top: 1px solid #E8E6E0;
+  background: #12121f;
+  border-top: 1px solid rgba(127,119,221,0.15);
   padding: 1.4rem 3rem;
   text-align: center;
   font-size: 12.5px;
-  color: #B4B2A9;
+  color: #3C3A55;
   margin-top: 4rem;
 }
 </style>
