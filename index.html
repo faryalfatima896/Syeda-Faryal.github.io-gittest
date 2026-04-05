@@ -6,21 +6,48 @@ title: "Home"
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap');
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: #FAFAF8;
-  color: #2C2C2A;
-}
-
-.hero {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 0 2rem;
+.hero-section {
+  min-height: 90vh;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(127,119,221,0.15) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  border-radius: 50%;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(83,74,183,0.1) 0%, transparent 70%);
+  bottom: -80px;
+  left: -80px;
+  border-radius: 50%;
+}
+
+.hero-inner {
+  max-width: 960px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 3rem;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text { flex: 1; }
@@ -28,224 +55,4 @@ body {
 .hero-tag {
   display: inline-block;
   font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: #534AB7;
-  background: #EEEDFE;
-  padding: 4px 14px;
-  border-radius: 20px;
-  margin-bottom: 1.2rem;
-  font-weight: 500;
-}
-
-.hero-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 1.2;
-  color: #1a1a18;
-  margin-bottom: 0.6rem;
-}
-
-.hero-sub {
-  font-size: 15px;
-  color: #888780;
-  font-weight: 300;
-  margin-bottom: 1.2rem;
-}
-
-.hero-desc {
-  font-size: 14.5px;
-  color: #5F5E5A;
-  line-height: 1.8;
-  max-width: 420px;
-  margin-bottom: 1.8rem;
-}
-
-.hero-btns { display: flex; gap: 12px; }
-
-.btn-primary {
-  padding: 10px 24px;
-  background: #3C3489;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 13.5px;
-  font-family: 'DM Sans', sans-serif;
-  cursor: pointer;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.btn-secondary {
-  padding: 10px 24px;
-  background: transparent;
-  color: #3C3489;
-  border: 1px solid #AFA9EC;
-  border-radius: 6px;
-  font-size: 13.5px;
-  font-family: 'DM Sans', sans-serif;
-  cursor: pointer;
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.hero-avatar {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #EEEDFE 0%, #CECBF6 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  border: 4px solid #fff;
-  box-shadow: 0 4px 24px rgba(83,74,183,0.15);
-}
-
-.avatar-initials {
-  font-family: 'Playfair Display', serif;
-  font-size: 48px;
-  font-weight: 600;
-  color: #534AB7;
-}
-
-.info-row {
-  max-width: 900px;
-  margin: 0 auto 2.5rem;
-  padding: 0 2rem;
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.info-pill {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  color: #5F5E5A;
-}
-
-.pill-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #7F77DD;
-}
-
-.divider {
-  max-width: 900px;
-  margin: 0 auto 2.5rem;
-  padding: 0 2rem;
-}
-
-.divider hr { border: none; border-top: 1px solid #E8E6E0; }
-
-.posts {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 2rem 4rem;
-}
-
-.posts h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  color: #1a1a18;
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-}
-
-.card {
-  background: #fff;
-  border: 1px solid #E8E6E0;
-  border-radius: 10px;
-  padding: 1.4rem;
-}
-
-.card-tag {
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #534AB7;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-
-.card-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  font-weight: 500;
-  color: #1a1a18;
-  margin-bottom: 6px;
-  line-height: 1.4;
-}
-
-.card-desc {
-  font-size: 13px;
-  color: #888780;
-  line-height: 1.6;
-}
-
-.card-date {
-  font-size: 11.5px;
-  color: #B4B2A9;
-  margin-top: 12px;
-}
-</style>
-
-<article>
-  <div class="hero">
-    <div class="hero-text">
-      <span class="hero-tag">Computer Engineering · UET Faisalabad</span>
-      <h1 class="hero-name">Syeda Faryal<br>Fatima Naqvi</h1>
-      <p class="hero-sub">Student · Writer · Tech Enthusiast</p>
-      <p class="hero-desc">Welcome to my personal blog — a space where I document my journey through engineering, share coding adventures, and reflect on life at UET.</p>
-      <div class="hero-btns">
-        <a href="/blog/" class="btn-primary">Read My Blog</a>
-        <a href="/about/" class="btn-secondary">About Me</a>
-      </div>
-    </div>
-    <div class="hero-avatar">
-      <span class="avatar-initials">SFN</span>
-    </div>
-  </div>
-
-  <div class="info-row">
-    <div class="info-pill"><span class="pill-dot"></span> Faisalabad, Pakistan</div>
-    <div class="info-pill"><span class="pill-dot"></span> faryalfatima896@github.io</div>
-    <div class="info-pill"><span class="pill-dot"></span> CE Student</div>
-  </div>
-
-  <div class="divider"><hr></div>
-
-  <div class="posts">
-    <h2>Recent Posts</h2>
-    <div class="cards-grid">
-      <div class="card">
-        <div class="card-tag">University Life</div>
-        <div class="card-title">My First Semester at UET Faisalabad</div>
-        <div class="card-desc">Lessons, friendships, and everything I wish I knew before starting.</div>
-        <div class="card-date">March 2025</div>
-      </div>
-      <div class="card">
-        <div class="card-tag">Coding</div>
-        <div class="card-title">Getting Started with Python</div>
-        <div class="card-desc">How I went from zero to writing my first real program.</div>
-        <div class="card-date">February 2025</div>
-      </div>
-      <div class="card">
-        <div class="card-tag">Reflections</div>
-        <div class="card-title">Why I Chose Computer Engineering</div>
-        <div class="card-desc">The story behind my decision and where I hope it takes me.</div>
-        <div class="card-date">January 2025</div>
-      </div>
-    </div>
-  </div>
-</article>
+  letter
