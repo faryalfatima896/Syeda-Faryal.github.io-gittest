@@ -4,171 +4,95 @@
 {% include head.html %}
 
 <style>
-  /* ===== GOOGLE FONT IMPORT ===== */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap');
 
-  /* ===== PARTICLES BACKGROUND ===== */
-  #particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background: #0f0c29;
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-  /* ===== BODY ===== */
-  body {
-    position: relative;
-    z-index: 1;
-    font-family: 'Poppins', sans-serif !important;
-    color: #FF69B4 !important;
-  }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #FAFAF8;
+  color: #2C2C2A;
+  min-height: 100vh;
+}
 
-  /* ===== HEADINGS ===== */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif !important;
-    color: #FF1493 !important;
-    font-weight: 700 !important;
-  }
+/* ===== NAVBAR ===== */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #E8E6E0;
+  padding: 1.2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-  /* ===== PARAGRAPHS & TEXT ===== */
-  p, li, span, div {
-    font-family: 'Poppins', sans-serif !important;
-    color: #FF69B4 !important;
-  }
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2C2C2A;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+}
 
-  /* ===== HOVER ANIMATIONS ON LINKS ===== */
-  a {
-    position: relative;
-    color: #FF69B4 !important;
-    text-decoration: none !important;
-    transition: color 0.3s ease !important;
-  }
+.site-nav {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
 
-  a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #FF69B4;
-    transition: width 0.3s ease;
-    box-shadow: 0 0 8px #FF1493;
-  }
+.site-nav a {
+  font-size: 13.5px;
+  color: #888780;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  transition: color 0.2s;
+}
 
-  a:hover::after {
-    width: 100%;
-  }
+.site-nav a:hover { color: #3C3489; }
 
-  a:hover {
-    color: #ffffff !important;
-    text-shadow: 0 0 10px #FF69B4, 0 0 20px #FF1493 !important;
-    letter-spacing: 1px !important;
-    transition: all 0.3s ease !important;
-  }
+/* ===== MAIN CONTENT ===== */
+.page-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
 
-  /* ===== SCROLL FADE-IN ANIMATION ===== */
-  .fade-in-element {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-
-  .fade-in-element.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid #E8E6E0;
+  padding: 1.4rem 3rem;
+  text-align: center;
+  font-size: 12.5px;
+  color: #B4B2A9;
+  margin-top: 4rem;
+}
 </style>
 
 <body>
 
-  <!-- Particles Background -->
-  <div id="particles-js"></div>
-
-  <header class="hover smooth">
-    {% unless site.show_minimal and site.navigation and site.external %}
-      <h1 {% if site.navigation and site.external %}class="full"{% endif %}>
-        <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-      </h1>
-    {% endunless %}
-    {% include menu.html %}
+  <header class="site-header">
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <nav>
+      <ul class="site-nav">
+        {% for item in site.menu %}
+        <li><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
   </header>
 
-  {{ content }}
+  <main class="page-content">
+    {{ content }}
+  </main>
 
-  {%- if site.footer -%}
-  <footer class="hover">
-    <div>{{ site.description }}</div>
+  <footer class="site-footer">
+    &copy; {{ site.time | date: "%Y" }} Syeda Faryal Fatima Naqvi &middot; All rights reserved
   </footer>
-  {%- endif -%}
-
-  <!-- Particles JS -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: "#FF69B4" },
-        shape: { type: "circle" },
-        opacity: { value: 0.5, random: true },
-        size: { value: 3, random: true },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#FF69B4",
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 3,
-          direction: "none",
-          random: false,
-          straight: false,
-          out_mode: "out"
-        }
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: { enable: true, mode: "repulse" },
-          onclick: { enable: true, mode: "push" }
-        },
-        modes: {
-          repulse: { distance: 100 },
-          push: { particles_nb: 4 }
-        }
-      },
-      retina_detect: true
-    });
-  </script>
-
-  <!-- Scroll Fade-In Animation -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const targets = document.querySelectorAll('h1, h2, h3, p, a, li, div, span, footer');
-      targets.forEach((el, i) => {
-        el.classList.add('fade-in-element');
-        el.style.transitionDelay = (i * 0.05) + 's';
-      });
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.1 });
-
-      document.querySelectorAll('.fade-in-element').forEach(el => {
-        observer.observe(el);
-      });
-    });
-  </script>
 
 </body>
 </html>
