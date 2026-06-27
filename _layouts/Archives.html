@@ -2,12 +2,37 @@
 layout: default
 title: Archives
 ---
-<div class="archives-page">
-  <h1>Archives</h1>
-  {% for post in site.posts %}
-  <div class="archive-item">
-    <span>{{ post.date | date: "%B %Y" }}</span>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+<div style="max-width: 800px; margin: 0 auto; padding: 2rem;">
+  <h1 style="font-size: 2.5rem; margin-bottom: 2rem;">📅 Archives</h1>
+
+  {% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  
+  {% for year in postsByYear %}
+  <div style="margin-bottom: 2.5rem;">
+    <h2 style="color: #a78bfa; font-size: 1.5rem; margin-bottom: 1rem;">
+      {{ year.name }}
+    </h2>
+    
+    {% assign postsByMonth = year.items | group_by_exp: "post", "post.date | date: '%B'" %}
+    {% for month in postsByMonth %}
+    <div style="margin-bottom: 1.5rem; margin-left: 1rem;">
+      <h3 style="color: #6b6a7a; font-size: 1rem; margin-bottom: 0.8rem;">
+        📌 {{ month.name }}
+      </h3>
+      <ul style="list-style: none; padding: 0;">
+        {% for post in month.items %}
+        <li style="padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); margin-left: 1rem;">
+          <a href="{{ site.baseurl }}{{ post.url }}" style="color: white; text-decoration: none; font-size: 0.95rem;">
+            {{ post.title }}
+          </a>
+          <span style="color: gray; font-size: 0.8rem; margin-left: 0.5rem;">
+            {{ post.date | date: "%d %B %Y" }}
+          </span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
   </div>
   {% endfor %}
 </div>
