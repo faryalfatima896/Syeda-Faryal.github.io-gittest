@@ -66,6 +66,30 @@ Hi, I'm **Syeda Faryal Fatima Naqvi** — a quiet observer, a deep thinker, and 
 - Created data visualizations and graphs
 
 ---
+## 👨‍🏫 My Mentor — Dr. Bilal Ahmad
+
+Dr. Bilal Ahmad is my professor at UET Lahore Faisalabad Campus — an **AI, Machine Learning and Deep Learning expert** who specializes in building intelligent predictive systems. He particularly works with **medical datasets** because of their high precision and real-world impact on human lives.
+
+### Connect with Dr. Bilal Ahmad
+
+- 🔗 [LinkedIn](https://www.linkedin.com/in/drbilalphd/)
+- 📚 [Google Scholar](https://scholar.google.com.au/citations?user=8nZ0jVkAAAAJ&hl=en)
+- 📘 [Facebook](https://www.facebook.com/Dr.BilalAhm)
+
+### His Teaching Philosophy 💡
+
+- Pushes students beyond their comfort zone
+- Every lesson connects to a real-world application
+- Teaches through scenario-based examples
+- Believes in learning by doing
+- Guided us to build things that actually matter
+
+### Subjects He Taught Me
+
+| Subject | Topics Covered |
+|---------|---------------|
+| **Programming Fundamentals** | Python, Arrays, Functions, ML basics |
+| **Database Systems** | SQL, ER Diagrams, Normalization, WAMP Server |
 
 ## 🎓 My Journey So Far
 
