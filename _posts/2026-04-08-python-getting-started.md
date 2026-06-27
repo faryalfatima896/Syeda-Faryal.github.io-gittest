@@ -6,6 +6,8 @@ categories: [Coding, Programming Fundamentals]
 tags: [Python, DrBilalAhmad, ProgrammingFundamentals, MLwithDrBilalAhmad, MLProject, ComputerEngineering, UETLahore, LearningJourney]
 ---
 
+![Python Coding](https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=800)
+
 When I first heard that we would be learning Python in our Programming 
 Fundamentals course, I honestly did not know what to expect. I had never 
 written a single line of code in my life. The word "programming" itself 
