@@ -1,223 +1,89 @@
 ---
 layout: page
-title: "About"
+title: About
 permalink: /about/
 ---
 
-<style>
-.about-intro {
-  font-size: 15px;
-  color: #5F5E5A;
-  line-height: 1.8;
-  max-width: 600px;
-  margin-bottom: 2.5rem;
-}
+# Hi, I'm Syeda Faryal Fatima Naqvi 👋
 
-.about-intro span {
-  font-weight: 500;
-  color: #2C2C2A;
-}
+**Computer Engineering Student · Writer · Introvert**
 
-.section-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  font-weight: 500;
-  color: #1a1a18;
-  margin-bottom: 1rem;
-  margin-top: 2.5rem;
-  border-bottom: 1px solid #E8E6E0;
-  padding-bottom: 0.5rem;
-}
+Hi, I'm **Syeda Faryal Fatima Naqvi** — a quiet observer, a deep thinker, and a Computer Engineering student at **UET Faisalabad**. I'm originally from **Lahore**, the city of gardens, where I grew up finding comfort in books, screens, and my own little world.
 
-.about-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
-  margin-bottom: 1rem;
-}
+> "I'm an introvert — I recharge in silence, think deeply before I speak, and express myself best through writing. This blog is my way of sharing thoughts I'd never say out loud."
 
-.about-card {
-  background: #fff;
-  border: 1px solid #E8E6E0;
-  border-radius: 10px;
-  padding: 1.2rem 1.4rem;
-}
+---
 
-.about-card-label {
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #534AB7;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
+## Quick Info 📋
 
-.about-card-value {
-  font-size: 14px;
-  color: #2C2C2A;
-  line-height: 1.6;
-}
+| | |
+|---|---|
+| 🎓 **Degree** | BS Computer Engineering — UET Faisalabad |
+| 🏙️ **Hometown** | Lahore, Pakistan |
+| 💡 **Personality** | Introvert & Observer |
+| 📚 **Currently** | Studying Databases, ML & Python |
 
-.about-card-desc {
-  font-size: 12.5px;
-  color: #888780;
-  margin-top: 4px;
-  line-height: 1.5;
-}
+---
 
-.skills-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 1rem;
-}
+## 🛠️ Tech Stack & Skills
 
-.skill-pill {
-  background: #EEEDFE;
-  color: #534AB7;
-  font-size: 13px;
-  font-weight: 500;
-  padding: 6px 16px;
-  border-radius: 20px;
-}
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Scikit Learn](https://img.shields.io/badge/ScikitLearn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
-.project-card {
-  background: #fff;
-  border: 1px solid #E8E6E0;
-  border-left: 3px solid #534AB7;
-  border-radius: 10px;
-  padding: 1.4rem;
-  margin-bottom: 1rem;
-}
+---
 
-.project-title {
-  font-size: 15px;
-  font-weight: 500;
-  color: #1a1a18;
-  margin-bottom: 6px;
-}
+## 🚀 Projects
 
-.project-desc {
-  font-size: 13.5px;
-  color: #5F5E5A;
-  line-height: 1.7;
-}
+### NeuroGuard — Stroke Risk Predictor
+![ML Project](https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600)
 
-.project-tag {
-  display: inline-block;
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #534AB7;
-  background: #EEEDFE;
-  padding: 3px 10px;
-  border-radius: 20px;
-  margin-bottom: 8px;
-  font-weight: 500;
-}
+- Built a **Random Forest Classification** model for stroke prediction
+- Deployed using **FastAPI** with a complete web interface
+- Dataset included hypertension, heart rate, BMI, glucose levels
+- Supervised by **Dr. Bilal Ahmad**
 
-.fun-facts {
-  list-style: none;
-  padding: 0;
-}
+---
 
-.fun-facts li {
-  font-size: 14px;
-  color: #5F5E5A;
-  line-height: 1.8;
-  padding: 8px 0;
-  border-bottom: 1px solid #F0EEE8;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
+### Car Game — OOP in C#
+![Game Development](https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600)
 
-.fun-facts li:last-child { border-bottom: none; }
+- Built a complete car game using **C# Windows Forms**
+- Applied all **4 pillars of OOP** — Encapsulation, Inheritance, Polymorphism, Abstraction
+- Solo project — designed and developed independently
 
-.fact-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #7F77DD;
-  margin-top: 8px;
-  flex-shrink: 0;
-}
+---
 
-.introvert-box {
-  background: #EEEDFE;
-  border-radius: 10px;
-  padding: 1.4rem 1.6rem;
-  margin: 2rem 0;
-  font-size: 14.5px;
-  color: #3C3489;
-  line-height: 1.8;
-  border-left: 3px solid #7F77DD;
-}
-</style>
+### Mall Dataset ML Project
+![Data Science](https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600)
 
-<p class="about-intro">
-  Hi, I'm <span>Syeda Faryal Fatima Naqvi</span> — a quiet observer, a deep thinker, and a Computer Engineering student at <span>UET Faisalabad</span>. 
-  I'm originally from <span>Lahore</span>, the city of gardens, where I grew up finding comfort in books, screens, and my own little world.
-  I don't talk much — but when I do, it's usually about code, databases, or something I've been thinking about for days.
-</p>
+- Trained a machine learning model on real mall dataset
+- Used **Pandas, Scikit-learn, Matplotlib, Joblib**
+- Created data visualizations and graphs
 
-<div class="introvert-box">
-  "I'm an introvert — I recharge in silence, think deeply before I speak, and express myself best through writing. This blog is my way of sharing thoughts I'd never say out loud."
-</div>
+---
 
-<h2 class="section-heading">Quick Info</h2>
-<div class="about-cards">
-  <div class="about-card">
-    <div class="about-card-label">Degree</div>
-    <div class="about-card-value">BS Computer Engineering</div>
-    <div class="about-card-desc">UET Faisalabad</div>
-  </div>
-  <div class="about-card">
-    <div class="about-card-label">Hometown</div>
-    <div class="about-card-value">Lahore, Pakistan</div>
-    <div class="about-card-desc">The city of gardens and culture</div>
-  </div>
-  <div class="about-card">
-    <div class="about-card-label">Personality</div>
-    <div class="about-card-value">Introvert & Observer</div>
-    <div class="about-card-desc">Deep thinker, quiet achiever</div>
-  </div>
-  <div class="about-card">
-    <div class="about-card-label">Currently</div>
-    <div class="about-card-value">Studying Databases</div>
-    <div class="about-card-desc">SQL, WAMP Server & beyond</div>
-  </div>
-</div>
+## 🎓 My Journey So Far
 
-<h2 class="section-heading">Technical Skills</h2>
-<div class="skills-row">
-  <span class="skill-pill">Python</span>
-  <span class="skill-pill">MySQL</span>
-  <span class="skill-pill">WAMP Server</span>
-  <span class="skill-pill">Database Design</span>
-  <span class="skill-pill">Machine Learning</span>
-  <span class="skill-pill">Programming Fundamentals</span>
-</div>
+- 🐍 Started with **Python** — struggled for weeks, then everything clicked
+- 🗄️ Learned **Database Systems** — SQL, ER Diagrams, Normalization
+- 🤖 Trained my **first ML model** — mall dataset project
+- 🚀 Deployed **NeuroGuard** — FastAPI stroke prediction app
+- 🎮 Built a **Car Game** in C# using OOP
+- 📝 Started this **blog** to document my journey
 
-<h2 class="section-heading">Projects</h2>
-<div class="project-card">
-  <span class="project-tag">Machine Learning · Semester 1 Finals</span>
-  <div class="project-title">ML Model Training Project</div>
-  <div class="project-desc">
-    For my first semester finals, I built and trained a Machine Learning model — a milestone moment for me as a student.
-    Working mostly on my own (as introverts do), I explored data preprocessing, model selection, and training pipelines from scratch.
-    It was challenging, rewarding, and it opened my eyes to the world of AI and intelligent systems.
-    This project confirmed that I want to go deeper into machine learning in the future.
-  </div>
-</div>
+---
 
-<h2 class="section-heading">A Little More About Me</h2>
-<ul class="fun-facts">
-  <li><span class="fact-dot"></span> I'm from Lahore — a city full of life, history, and the best food in Pakistan. I carry it with me everywhere I go.</li>
-  <li><span class="fact-dot"></span> Moving to Faisalabad for university was my first big step out of my comfort zone. Hostel life taught me more than any classroom ever could.</li>
-  <li><span class="fact-dot"></span> I started coding with Python in my Programming Fundamentals course. It was the first time I felt like I could actually build something.</li>
-  <li><span class="fact-dot"></span> I've worked with MySQL and WAMP Server — there's something deeply satisfying about organizing data and making it work.</li>
-  <li><span class="fact-dot"></span> I'm currently studying databases seriously — it's become one of my favourite areas of computer engineering.</li>
-  <li><span class="fact-dot"></span> As an introvert, I find it easier to write than to speak. This blog is my voice — honest, quiet, and real.</li>
-  <li><span class="fact-dot"></span> I believe that the quietest people often have the loudest minds. I'm living proof of that.</li>
-</ul>
+## A Little More About Me 💭
+
+- I'm from Lahore — a city full of life, history, and the best food in Pakistan
+- Moving to Faisalabad for university was my first big step out of my comfort zone
+- Hostel life taught me more than any classroom ever could
+- I started coding with Python — it was the first time I felt like I could actually build something
+- I've worked with MySQL and WAMP Server — there's something deeply satisfying about organizing data
+- As an introvert, I find it easier to write than to speak. This blog is my voice — honest, quiet, and real
+- I believe that the quietest people often have the loudest minds. I'm living proof of that 🌙
