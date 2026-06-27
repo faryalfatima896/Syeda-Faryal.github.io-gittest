@@ -14,7 +14,4 @@ menu:
     url: "/contact/"
   - title: "Tags"
     url: "/tags/"
-  - title: "Categories"
-    url: "/categories/"
-  - title: "Archives"
-    url: "/archives/"
+  
