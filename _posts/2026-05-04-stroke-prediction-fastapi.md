@@ -8,74 +8,90 @@ tags: [MLProject, FastAPI, DrBilalAhmad, MLwithDrBilalAhmad, Python, ComputerEng
 
 ![FastAPI ML](https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800)
 
-If someone had told me at the start of my first year at UET Lahore Faisalabad Campus that I would deploy a machine learning model that predicts stroke risk in human beings — I would not have believed them. But that is exactly what happened. And it remains one of the most meaningful things I have done as a Computer Engineering student so far.
+If someone had told me at the start of my first year at UET Lahore Faisalabad Campus that I would deploy a machine learning model that predicts stroke risk in human beings — I would not have believed them. But that is exactly what happened.
 
-## Introduction
+## Introduction 🎯
 
-Building a machine learning model is only part of the journey. A model sitting inside a Jupyter Notebook cannot help anyone. If real users cannot interact with it, its practical value remains limited. This realization became the starting point of one of the most exciting phases of my learning journey — deploying my stroke prediction model using FastAPI and building a real web interface around it.
+Building a machine learning model is only part of the journey. A model sitting inside a Jupyter Notebook cannot help anyone. This realization became the starting point of one of the most exciting phases of my learning — deploying my stroke prediction model using FastAPI.
 
 ## The Dataset 🏥
 
-The dataset we worked with was a medical dataset — exactly the kind Dr. Bilal Ahmad always emphasizes. He is an AI, ML and Deep Learning expert who consistently pushes his students toward medical datasets because of their real world value and precision. Our dataset contained genuinely important health attributes:
+The dataset contained genuinely important health attributes:
 
-- **Hypertension history** — does the patient have high blood pressure?
-- **Heart rate** — what is the patient's heart rate?
-- **Daily work hours** — how many hours does the patient work per day?
-- **Employment type** — government or private sector job?
-- **Smoking status** — does the patient smoke or not?
+- **Hypertension** — does the patient have high blood pressure?
+- **Heart Disease** — any existing heart conditions?
+- **Age and Gender** — basic demographic information
+- **Work Type** — government, private, or self-employed?
+- **Avg Glucose Level** — blood sugar levels
+- **BMI** — body mass index
+- **Smoking Status** — current, former, or never smoked?
+- **Ever Married** — marital status
+- **Residence Type** — urban or rural?
 
-These were not random numbers. These were features that directly relate to a person's risk of experiencing a stroke. Working with data that meaningful made every step of the project feel important.
+## The NeuroGuard Web Interface 🖥️
 
-## Building the Machine Learning Model 🤖
+We built a complete web application called **NeuroGuard — Stroke Risk Predictor**:
 
-### 1. Choosing the Algorithm
+![NeuroGuard Interface](https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800)
 
-The model we built was a **Random Forest Classification** model. Random Forest works by building multiple decision trees and combining their outputs to make a final prediction — making it more accurate and reliable than a single decision tree alone.
+The interface allowed users to:
+1. Enter patient clinical and demographic details
+2. Click **Analyse Risk**
+3. Get instant stroke risk prediction
 
-### 2. Training the Model
+## Building the ML Model 🤖
 
-Understanding the training process took time and patience:
+### The Algorithm — Random Forest
 
-- Loading and preprocessing the dataset
-- Splitting data into training and testing sets
-- Training the Random Forest model
-- Evaluating accuracy and performance
-- Saving the model using Joblib
+The model we built was a **Random Forest Classification** model. Random Forest works by building multiple decision trees and combining their outputs — making it more accurate than a single decision tree alone.
 
-Dr. Bilal Ahmad guided us fully throughout. He did not just tell us what to do — he made sure we understood **why** we were doing it.
+### Training Process
+
+1. Loading and preprocessing the dataset
+2. Splitting data into training and testing sets
+3. Training the Random Forest model
+4. Evaluating accuracy and performance
+5. Saving the model using Joblib
 
 ## Deploying with FastAPI ⚡
 
-### Discovering FastAPI
+### What Is FastAPI?
 
-The biggest technical milestone of this project was learning **FastAPI**. Before this project, my experience mainly involved writing Python programs and training machine learning models. FastAPI introduced me to backend development entirely.
+FastAPI is a modern, high-performance Python framework for building APIs. It allowed me to:
 
-FastAPI is a modern, high-performance Python framework designed for building APIs efficiently. The framework allowed me to create endpoints that could receive data from the frontend and return predictions generated by the machine learning model.
+- Create API endpoints
+- Receive data from the frontend
+- Pass data to the ML model
+- Return predictions to the user
 
-### Building the Web Interface
-
-The application workflow worked like this:
+### The Application Workflow
 
 1. User enters health information on the webpage
 2. Frontend collects the data
 3. Data is sent to FastAPI via an API call
 4. FastAPI passes the data to the trained ML model
 5. The model analyzes the features and generates a prediction
-6. The prediction is returned as a response to the frontend
+6. The prediction is returned as a response
 7. The user sees the stroke risk result on screen
 
-For the first time, my machine learning model felt like a **real product** rather than an isolated academic exercise.
+## The Database Design 🗄️
 
-## Challenges and Breakthroughs 🔧
+We also designed a complete database for the project with proper ER diagram and normalized tables including:
 
-Not everything worked perfectly from the beginning. The process of understanding how FastAPI connects to a machine learning model was genuinely difficult. There were moments of confusion and frustration. But following Dr. Bilal Ahmad's guidance step by step, everything slowly came together.
+- **Patient** table
+- **HealthMetrics** table
+- **MedicalHistory** table
+- **Lifestyle** table
+- **Genders, WorkTypes, SmokingStatuses, ResidenceTypes** lookup tables
 
-The moment the application finally ran — when I entered health data into the interface and saw the model return a prediction in real time — the happiness I felt was something I cannot fully describe.
+## Dr. Bilal Ahmad's Guidance 👨‍🏫
+
+Dr. Bilal Ahmad guided us fully throughout the entire project. He made sure we understood why each step existed, what it was doing, and how it contributed to the final model. That deeper understanding is what separates someone who can follow instructions from someone who can actually think like a data scientist.
 
 ## Final Reflection #
 
-Deploying my first machine learning model with FastAPI was one of the most rewarding experiences of my academic journey so far. This project taught me that machine learning models become truly valuable when they can be accessed and used by real people.
+When the application finally ran — when I entered health data into the interface and saw the model return a prediction in real time — the happiness I felt was something I cannot fully describe.
 
 Dr. Bilal Ahmad always says that the goal is not just to learn — it is to **build things that matter**. This project was proof that even as first year students, we are capable of building things that matter.
 
-#MLwithDrBilalAhmad #DrBilalAhmad #MLProject #FastAPI #Python #StrokePrediction #ComputerEngineering #UETLahore #LearningJourney #RandomForest
+#MLProject #FastAPI #DrBilalAhmad #MLwithDrBilalAhmad #Python #ComputerEngineering #UETLahore #LearningJourney #RandomForest #StrokePrediction
