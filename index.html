@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Home"
 ---
 
@@ -205,6 +204,11 @@ title: "Home"
   border: 1px solid rgba(127,119,221,0.2);
   border-radius: 12px;
   padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(127,119,221,0.5);
 }
 
 .card-tag {
@@ -226,6 +230,10 @@ title: "Home"
   line-height: 1.4;
 }
 
+.card-title:hover {
+  color: #AFA9EC;
+}
+
 .card-desc {
   font-size: 13px;
   color: #6b6a7a;
@@ -237,6 +245,86 @@ title: "Home"
   font-size: 11.5px;
   color: #3C3A55;
   margin-top: 14px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.skills-section {
+  background: #12121f;
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(127,119,221,0.15);
+}
+
+.skills-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.skills-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #F0EFF8;
+  margin-bottom: 1.5rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-badge {
+  background: rgba(127,119,221,0.1);
+  border: 1px solid rgba(127,119,221,0.25);
+  color: #AFA9EC;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.mentor-section {
+  background: #0f0f1a;
+  padding: 3rem 2rem;
+  border-top: 1px solid rgba(127,119,221,0.15);
+}
+
+.mentor-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  background: #1a1a2e;
+  border: 1px solid rgba(127,119,221,0.2);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.mentor-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #F0EFF8;
+  margin-bottom: 0.8rem;
+}
+
+.mentor-desc {
+  font-size: 14px;
+  color: #9998aa;
+  line-height: 1.8;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.mentor-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.mentor-link {
+  font-size: 13px;
+  color: #7F77DD;
+  text-decoration: none;
+  border: 1px solid rgba(127,119,221,0.3);
+  padding: 6px 16px;
+  border-radius: 999px;
   font-family: 'DM Sans', sans-serif;
 }
 </style>
@@ -274,24 +362,47 @@ title: "Home"
       <h2 class="posts-heading">Recent Posts</h2>
       <p class="posts-sub">Thoughts, learnings, and moments worth remembering.</p>
       <div class="cards-grid">
+        {% for post in site.posts limit:6 %}
         <div class="card">
-          <div class="card-tag">University Life</div>
-          <div class="card-title">My First Semester at UET Faisalabad</div>
-          <div class="card-desc">Lessons, friendships, and everything I wish I knew before starting.</div>
-          <div class="card-date">March 2025</div>
+          <div class="card-tag">{{ post.categories | first }}</div>
+          <a href="{{ site.baseurl }}{{ post.url }}" style="text-decoration:none;">
+            <div class="card-title">{{ post.title }}</div>
+          </a>
+          <div class="card-desc">{{ post.excerpt | strip_html | truncate: 100 }}</div>
+          <div class="card-date">{{ post.date | date: "%B %Y" }}</div>
         </div>
-        <div class="card">
-          <div class="card-tag">Coding</div>
-          <div class="card-title">Getting Started with Python</div>
-          <div class="card-desc">How I went from zero to writing my first real program.</div>
-          <div class="card-date">February 2025</div>
-        </div>
-        <div class="card">
-          <div class="card-tag">Reflections</div>
-          <div class="card-title">Why I Chose Computer Engineering</div>
-          <div class="card-desc">The story behind my decision and where I hope it takes me.</div>
-          <div class="card-date">January 2025</div>
-        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-section">
+    <div class="skills-inner">
+      <h2 class="skills-heading">🛠️ Technical Skills</h2>
+      <div class="skills-grid">
+        <span class="skill-badge">🐍 Python</span>
+        <span class="skill-badge">🗄️ MySQL</span>
+        <span class="skill-badge">🤖 Machine Learning</span>
+        <span class="skill-badge">⚡ FastAPI</span>
+        <span class="skill-badge">📊 Pandas</span>
+        <span class="skill-badge">🔬 Scikit-Learn</span>
+        <span class="skill-badge">🎮 C# & OOP</span>
+        <span class="skill-badge">📐 ER Diagrams</span>
+        <span class="skill-badge">🗃️ Database Design</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mentor-section">
+    <div class="mentor-inner">
+      <h2 class="mentor-heading">👨‍🏫 My Mentor — Dr. Bilal Ahmad</h2>
+      <p class="mentor-desc">
+        Dr. Bilal Ahmad is my professor at UET Lahore Faisalabad Campus — an AI, Machine Learning and Deep Learning expert who has shaped my entire first year journey. He taught me Programming Fundamentals and Database Systems, and under his supervision I built and deployed my first ML model. He believes in building things that matter.
+      </p>
+      <div class="mentor-links">
+        <a href="https://www.linkedin.com/in/drbilalphd/" class="mentor-link">🔗 LinkedIn</a>
+        <a href="https://scholar.google.com.au/citations?user=8nZ0jVkAAAAJ&hl=en" class="mentor-link">📚 Google Scholar</a>
+        <a href="https://www.facebook.com/Dr.BilalAhm" class="mentor-link">📘 Facebook</a>
       </div>
     </div>
   </div>
