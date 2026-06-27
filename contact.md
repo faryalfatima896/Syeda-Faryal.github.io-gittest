@@ -19,6 +19,10 @@ permalink: /contact/
   gap: 16px;
   margin-bottom: 2rem;
 }
+  Connect 
+
+- 💼 [LinkedIn](TUMHARI_LINKEDIN_LINK_YAHAN)
+- 📧 faryalfatima896@gmail.com
 
 .contact-card {
   background: #fff;
